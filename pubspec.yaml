@@ -1,0 +1,39 @@
+name: assignment
+description: Assignment
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  http: ^0.13.3
+  flutter_bloc: ^7.0.1
+  connectivity: ^3.0.6
+  better_player: ^0.0.70
+  like_button: ^2.0.2
+  extended_image: ^4.1.0
+  google_fonts: ^2.1.0
+  pagination_view: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_native_splash: ^1.2.0
+
+flutter:
+
+  uses-material-design: true
+
+#  assets:
+
+flutter_native_splash:
+  color: "#282828"
+  image: android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png
+  fullscreen: false
