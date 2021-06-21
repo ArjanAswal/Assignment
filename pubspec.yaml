@@ -14,12 +14,14 @@ dependencies:
 
   http: ^0.13.3
   flutter_bloc: ^7.0.1
-  connectivity: ^3.0.6
+  flutter_offline: ^2.0.0
   better_player: ^0.0.70
   like_button: ^2.0.2
   extended_image: ^4.1.0
   google_fonts: ^2.1.0
   pagination_view: ^2.0.0
+  flutter_snake_navigationbar: ^0.5.0
+  hydrated_bloc: ^7.0.1
 
 dev_dependencies:
   flutter_test:
