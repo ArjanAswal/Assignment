@@ -1,8 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'dart:math';
-
 class PexelsClient {
   static final String apiKey =
       '563492ad6f917000010000012ee71721a21345448922c8032f434d5b';

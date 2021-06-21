@@ -1,13 +1,14 @@
-import 'package:assignment/Functions/get_title.dart';
 import 'package:assignment/Widgets/image_widget.dart';
+import 'package:assignment/Widgets/media_item_container.dart';
 import 'package:assignment/Widgets/video_player_widget.dart';
+import 'package:assignment/bloc/media/media_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:like_button/like_button.dart';
 
 class MediaItem extends StatelessWidget {
   final Map data;
+  final MediaState mediastate;
 
-  const MediaItem({Key key, this.data}) : super(key: key);
+  const MediaItem({Key key, this.data, this.mediastate}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,17 +30,8 @@ class MediaItem extends StatelessWidget {
               : ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: ImageWidget(data: data)),
-          SizedBox(height: 20),
-          LikeButton(
-            mainAxisAlignment: MainAxisAlignment.start,
-          ),
-          SizedBox(height: 10),
-          Text(getTitle(data['url'])),
-          SizedBox(height: 5),
-          Text(
-            isVideo ? data['user']['name'] : data['photographer'],
-            style: TextStyle(color: Theme.of(context).accentColor),
-          ),
+          MediaItemContainer(
+              mediastate: mediastate, data: data, isVideo: isVideo),
         ],
       ),
     );
