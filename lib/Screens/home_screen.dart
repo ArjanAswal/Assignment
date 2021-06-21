@@ -1,3 +1,4 @@
+import 'package:assignment/Clients/pexels_client.dart';
 import 'package:assignment/Widgets/loading_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   bool hasLoaded = false;
-  Future loadData() async {}
+  List data;
+  Future loadData() async {
+    data = data + await PexelsClient().loadData(1);
+  }
 
   @override
   Widget build(BuildContext context) {
