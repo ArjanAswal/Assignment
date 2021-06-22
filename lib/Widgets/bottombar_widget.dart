@@ -55,7 +55,7 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
                   BottomNavigationBarItem(
                       icon: Icon(Icons.home), label: 'home'),
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.favorite), label: 'tickets'),
+                      icon: Icon(Icons.favorite), label: 'favourite'),
                 ],
               ),
               if (!connected)

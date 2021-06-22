@@ -28,7 +28,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_native_splash: ^1.2.0
+  flutter_driver:
+    sdk: flutter
+  test: any
+
+dependency_overrides:
+  crypto: ^3.0.0
+#  flutter_native_splash: ^1.2.0
 
 flutter:
 
@@ -36,7 +42,7 @@ flutter:
 
 #  assets:
 
-flutter_native_splash:
-  color: "#282828"
-  image: android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png
-  fullscreen: false
+#flutter_native_splash:
+#  color: "#282828"
+#  image: android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png
+#  fullscreen: false
