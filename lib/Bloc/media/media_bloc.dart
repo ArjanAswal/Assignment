@@ -19,7 +19,7 @@ class MediaBloc extends HydratedBloc<MediaEvent, MediaState> {
       temp.remove(event.favouriteMedia);
     }
 
-    InitialMediaState(favouriteMedia: temp);
+    yield InitialMediaState(favouriteMedia: temp);
   }
 
   @override

@@ -42,11 +42,14 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
                 showSelectedLabels: false,
                 currentIndex: _selectedItemPosition,
                 onTap: (index) => setState(() {
-                  _selectedItemPosition = index;
-                  BlocProvider.of<NavigationBloc>(context).add(
-                      widget.state is HomeState
-                          ? FavouriteEvent()
-                          : HomeEvent());
+                  if (_selectedItemPosition != index) {
+                    _selectedItemPosition = index;
+
+                    BlocProvider.of<NavigationBloc>(context).add(
+                        widget.state is HomeState
+                            ? FavouriteEvent()
+                            : HomeEvent());
+                  }
                 }),
                 items: [
                   BottomNavigationBarItem(
